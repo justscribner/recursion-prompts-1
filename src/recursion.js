@@ -51,14 +51,21 @@ var isEven = function(n) {
     return isEven(n - 2)
   } 
 };
-
-console.log(isEven(8))
+//console.log(isEven(8))
 
 // 5. Sum all integers below a given integer.
 // sumBelow(10); // 45
 // sumBelow(7); // 21
 var sumBelow = function(n) {
+  let sum = 0;
+  if (!n) {
+    return 0; 
+  } else if (n) {
+    sum += n - 1;
+  }
+  return sum + sumBelow(n - 1);
 };
+//console.log(sumBelow(7));
 
 // 6. Get the integers within a range (x, y).
 // range(2,9); // [3,4,5,6,7,8]
